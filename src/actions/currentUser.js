@@ -9,6 +9,7 @@ export const login = credentials => {
     console.log('credentials are', credentials)
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", {
+            credentials: 'include',
             method: 'Post',
             headers: {
                 "Content-Type": "application/json"
@@ -29,7 +30,9 @@ export const login = credentials => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/get_current_user")
+        return fetch("http://localhost:3001/api/v1/get_current_user", {
+            credentials: 'include'
+        })
         .then(resp => resp.json())
         .then(user => { 
             if (user.notice) {

@@ -35,6 +35,33 @@ export const login = credentials => {
     }
 }
 
+export const signup = credentials => {
+    console.log('credentials are', credentials)
+    const userInfo = {
+        user: credentials
+    }
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/signup", {
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userInfo)
+        })
+        .then(resp => resp.json())
+        .then(json => {
+            console.log(json)
+            if (json.error) {
+                alert(json.error)
+            } else {
+                dispatch(setCurrentUser(json.data))
+            }
+        })
+        .catch(error => console.log(error))
+    }
+}
+
 export const logout = () => {
     return dispatch => {
         dispatch(clearCurrentUser())

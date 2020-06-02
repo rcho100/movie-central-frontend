@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import Logout from './components/Logout'
@@ -16,6 +17,7 @@ class App extends Component {
       <>
         <Router>
           <Switch>
+            <Route exact path='/' component={Home}/>
             <Route exact path='/signup' component={Signup}/>
             <Route exact path='/login' component={Login}/>
             <Route exact path='/logout' component={Logout}/>

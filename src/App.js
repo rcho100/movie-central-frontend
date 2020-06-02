@@ -4,6 +4,7 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Logout from './components/Logout'
 import Layout from './components/Layout'
+import NavigationBar from './components/NavigationBar'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <NavigationBar/>
         <Layout>
           <Router>
             <Switch>

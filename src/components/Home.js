@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { popularMovies } from '../actions/movies'
 
-const Home = () => {
-    return (
-        <div>
-            <h2>Hello</h2>
-        </div>
-    )
+class Home extends Component {
+    componentDidMount() {
+        this.props.popularMovies()
+    }
+
+    render() {
+        return (
+            <div>
+                <h2>Movie Central</h2>
+            </div>
+        )
+    }
 }
 
-export default Home
+export default connect(null, { popularMovies })(Home)

@@ -20,7 +20,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        popMovies: state.popMovies
+        popMovies: state.movies
     }
 }
 

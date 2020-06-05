@@ -3,7 +3,7 @@ import users from './reducers/users'
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import signupForm from './reducers/signupForm'
-import { popMovies } from './reducers/movies'
+import { movies } from './reducers/movies'
 import thunk from 'redux-thunk';
 
 
@@ -12,7 +12,7 @@ const reducer = combineReducers({
     currentUser,
     loginForm,
     signupForm,
-    popMovies
+    movies
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

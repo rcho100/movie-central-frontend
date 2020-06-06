@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { popularMovies } from '../actions/movies'
+import { popularMovies, topRatedMovies } from '../actions/movies'
 import PopularContainer from '../containers/PopularContainer'
 
 class Home extends Component {
     componentDidMount() {
         this.props.popularMovies()
+        this.props.topRatedMovies()
     }
 
     render() {
@@ -20,8 +21,8 @@ class Home extends Component {
 
 const mapStateToProps = state => {
     return {
-        popMovies: state.movies
+        popMovies: state.movies.popularMovies,
     }
 }
 
-export default connect(mapStateToProps, { popularMovies })(Home)
+export default connect(mapStateToProps, { popularMovies, topRatedMovies })(Home)

@@ -15,3 +15,21 @@ export const popularMovies = () => {
         .catch(error => console.log(error))
     }
 }
+
+export const receiveTopMovies = topMovies => {
+    return {
+        type: "RECEIVE_TOP_MOVIES",
+        topMovies
+    }
+}
+
+export const topRatedMovies = () => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/top_rated")
+        .then(resp => resp.json())
+        .then(topMovies => {
+            dispatch(receiveTopMovies(topMovies))
+        })
+        .catch(error => console.log(error))
+    }
+}

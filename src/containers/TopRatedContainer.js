@@ -1,14 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Poster from '../components/Poster'
+import { connect } from 'react-redux'
+import { topRatedMovies } from '../actions/movies'
 
-const TopRatedContainer = ({ topMovies }) =>{
-    console.log("working top movies", topMovies)
-    return (
-        <div>
-            <p>Top Rated Movies</p>
-            {topMovies.slice(10).map(movie => <Poster key={movie.id} movie={movie} />)}
-        </div>
-    )
+class TopRatedContainer extends Component {
+    componentDidMount() {
+        this.props.topRatedMovies()
+    }
+
+    render() {
+        const { topMovies } = this.props
+        return (
+            <div>
+                <p>Top Rated Movies</p>
+                {topMovies.slice(10).map(movie => <Poster key={movie.id} movie={movie} />)}
+            </div>
+        )
+    }
 }
 
-export default TopRatedContainer
+const mapStateToProps = state => {
+    return {
+        topMovies: state.movies.topRatedMovies
+    }
+}
+export default connect(mapStateToProps, { topRatedMovies })(TopRatedContainer)

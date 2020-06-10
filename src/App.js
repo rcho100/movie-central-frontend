@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import PopularContainer from './containers/PopularContainer';
 import TopRatedContainer from './containers/TopRatedContainer';
 import PopMovie from './components/PopMovie';
+import TopMovie from './components/TopMovie';
 
 class App extends Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class App extends Component {
               <Route exact path='/popular-movies' component={PopularContainer}/>
               <Route path='/popular-movies/:id' render={routerProps => <PopMovie {...routerProps} />} />
               <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
+              <Route path='/top-rated-movies/:id' render={routerProps => <TopMovie {...routerProps} />} />
             </Switch>
           </Router>
         </Layout>

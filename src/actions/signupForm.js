@@ -4,3 +4,9 @@ export const updateSignupForm = formData => {
         formData
     }
 }
+
+export const resetSignupForm = () => {
+    return {
+        type: "RESET_SIGNUP_FORM"
+    }
+}

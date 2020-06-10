@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm'
+import { resetSignupForm } from './signupForm'
 
 export const setCurrentUser = user => {
     return {
@@ -54,7 +55,7 @@ export const signup = credentials => {
         })
         .then(resp => resp.json())
         .then(json => {
-            console.log(json)
+            dispatch(resetSignupForm())
             if (json.error) {
                 alert(json.error)
             } else {

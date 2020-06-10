@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
-
-    goToPopMovies = () => {
-        this.props.history.push('/popular-movies')
-    }
-
-    goToTopRatedMovies = () => {
-        this.props.history.push('/top-rated-movies')
-    }
-
     render() {
         return (
             <div>
                 <h2>Movie Central</h2>
-                <p onClick={this.goToPopMovies}>Popular Movies</p>
-                <p onClick={this.goToTopRatedMovies}>Top Rated Movies</p>
+                <Link to='/popular-movies'>
+                    <p>Popular Movies</p>
+                </Link>
+                <Link to='/top-rated-movies'>
+                    <p>Top Rated Movies</p>
+                </Link>
             </div>
         )
     }

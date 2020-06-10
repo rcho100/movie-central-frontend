@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Poster from '../components/Poster'
 import { connect } from 'react-redux'
 import { topRatedMovies } from '../actions/movies'
+import { Link } from 'react-router-dom'
 
 class TopRatedContainer extends Component {
     componentDidMount() {
@@ -13,7 +14,11 @@ class TopRatedContainer extends Component {
         return (
             <div>
                 <p>Top Rated Movies</p>
-                {topMovies.slice(10).map(movie => <Poster key={movie.id} movie={movie} />)}
+                {topMovies.slice(10).map(movie => (
+                    <Link to={`/top-rated-movies/${movie.id}`} key={movie.id} >
+                        <Poster movie={movie} />
+                    </Link>
+                ))}
             </div>
         )
     }

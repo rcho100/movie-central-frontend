@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Poster from '../components/Poster'
 import { connect } from 'react-redux'
 import { popularMovies } from '../actions/movies'
+import { Link } from 'react-router-dom'
 
 class PopularContainer extends Component {
     componentDidMount() {
@@ -13,7 +14,11 @@ class PopularContainer extends Component {
         return (
             <div>
                 <p>Popular Movies</p>
-                {popMovies.slice(10).map(movie => <Poster key={movie.id} movie={movie} />)}
+                {popMovies.slice(10).map(movie => (
+                    <Link to={`/popular-movies/${movie.id}`} key={movie.id} >
+                        <Poster movie={movie} />
+                    </Link>
+                ))}
             </div>
         )
     }

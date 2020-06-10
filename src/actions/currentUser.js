@@ -16,7 +16,6 @@ export const clearCurrentUser = () => {
 
 
 export const login = credentials => {
-    console.log('credentials are', credentials)
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", {
             credentials: 'include',
@@ -40,7 +39,6 @@ export const login = credentials => {
 }
 
 export const signup = credentials => {
-    console.log('credentials are', credentials)
     const userInfo = {
         user: credentials
     }

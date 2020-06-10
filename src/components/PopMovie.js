@@ -4,10 +4,8 @@ import { connect } from 'react-redux'
 
 class PopMovie extends Component {
     render() {
-        
         const movieID = this.props.match.params.id
         const movie = this.props.popMovies.find(movie => parseInt(movie.id, 10) === parseInt(movieID, 10))
-        console.log(movie)
 
         return (
             <div>

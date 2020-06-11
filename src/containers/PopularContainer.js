@@ -15,7 +15,7 @@ class PopularContainer extends Component {
             <div>
                 <p>Popular Movies</p>
                 {popMovies.slice(10).map(movie => (
-                    <Link to={`/popular-movies/${movie.id}`} key={movie.id} >
+                    <Link to={`/movies/${movie.id}`} key={movie.id} >
                         <Poster movie={movie} />
                     </Link>
                 ))}

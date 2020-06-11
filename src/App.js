@@ -30,7 +30,7 @@ class App extends Component {
               <Route exact path='/login' component={Login}/>
               <Route exact path='/logout' component={Logout}/>
               <Route exact path='/popular-movies' component={PopularContainer}/>
-              <Route path='/popular-movies/:id' render={routerProps => <PopMovie {...routerProps} />} />
+              <Route path='/movies/:id' render={routerProps => <PopMovie {...routerProps} />} />
               <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
               <Route path='/top-rated-movies/:id' render={routerProps => <TopMovie {...routerProps} />} />
             </Switch>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { movieDetails } from '../actions/movieDetails'
+import Button from 'react-bootstrap/Button'
 
 let movieID;
 
@@ -26,6 +27,7 @@ class PopMovie extends Component {
                     <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/w500" + backdrop_path}/>
                     <h4>Overview</h4>
                     <p>{overview}</p>
+                    <Button>Add to watchlist</Button>
                 </div>
             )
         } else {

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 let movieID;
 
-class PopMovie extends Component {
+class Movie extends Component {
     componentDidMount() {
         this.props.movieDetails(movieID)
     }
@@ -15,7 +15,7 @@ class PopMovie extends Component {
         
         if (this.props.movie) {
             const {id, title, backdrop_path, poster_path, overview, tagline, release_date, runtime} = this.props.movie
-
+            
             return (
                 <div>
                     <h2>{title}</h2>
@@ -45,4 +45,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { movieDetails })(PopMovie)
+export default connect(mapStateToProps, { movieDetails })(Movie)

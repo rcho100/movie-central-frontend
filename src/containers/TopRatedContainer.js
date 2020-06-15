@@ -15,7 +15,7 @@ class TopRatedContainer extends Component {
             <div>
                 <p>Top Rated Movies</p>
                 {topMovies.slice(10).map(movie => (
-                    <Link to={`/top-rated-movies/${movie.id}`} key={movie.id} >
+                    <Link to={`/movies/${movie.id}`} key={movie.id} >
                         <Poster movie={movie} />
                     </Link>
                 ))}

@@ -1,9 +1,11 @@
-export default (state = {}, action) => {
+export default (state = {user: {}, watchlist: []}, action) => {
     switch (action.type) {
         case "SET_CURRENT_USER":
-            return action.user
+            return {...state, user: action.user} 
         case "CLEAR_CURRENT_USER":
-            return {}
+            return {user: {}, watchlist: []}
+        case "ADD_TO_WATCHLIST":
+            return {...state, watchlist: [...state.watchlist, action.movie]}
         default:
             return state
     }

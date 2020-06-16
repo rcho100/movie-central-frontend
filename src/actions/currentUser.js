@@ -88,3 +88,33 @@ export const getCurrentUser = () => {
         .catch(error => console.log(error))
     }
 }
+
+// Current User's Watchlist
+export const addToWatchlist = (movie) => {
+    return {
+        type: 'ADD_TO_WATCHLIST',
+        movie
+    }
+}
+
+export const sendMovieToAdd = (movie) => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/add_movie", {
+            credentials: 'include',
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(movie)
+        })
+        .then(resp => resp.json())
+        .then(json => {
+            if (json.error) {
+                alert(json.error)
+            } else {
+                dispatch(addToWatchlist(json))
+            }
+        })
+        .catch(error => console.log(error))
+    }
+}

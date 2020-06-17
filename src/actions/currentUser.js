@@ -1,10 +1,11 @@
 import { resetLoginForm } from './loginForm'
 import { resetSignupForm } from './signupForm'
 
-export const setCurrentUser = user => {
+export const setCurrentUser = userInfo => {
     return {
         type: "SET_CURRENT_USER",
-        user
+        user: userInfo.data,
+        watchlist: userInfo.included
     }
 }
 
@@ -26,12 +27,12 @@ export const login = credentials => {
             body: JSON.stringify(credentials)
         })
         .then(resp => resp.json())
-        .then(user => {
+        .then(userInfo => {
             dispatch(resetLoginForm())
-            if (user.error) {
-                alert(user.error)
+            if (userInfo.error) {
+                alert(userInfo.error)
             } else {
-                dispatch(setCurrentUser(user))
+                dispatch(setCurrentUser(userInfo))
             }
         })
         .catch(error => console.log(error))

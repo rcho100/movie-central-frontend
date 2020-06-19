@@ -4,8 +4,8 @@ export default (state = {user: {}, watchlist: []}, action) => {
             return {...state, user: action.user, watchlist: action.watchlist} 
         case "CLEAR_CURRENT_USER":
             return {user: {}, watchlist: []}
-        case "ADD_TO_WATCHLIST":
-            return {...state, watchlist: [...state.watchlist, action.movie]}
+        case "UPDATE_WATCHLIST":
+            return {...state, watchlist: action.watchlist}
         default:
             return state
     }

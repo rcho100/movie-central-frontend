@@ -91,10 +91,10 @@ export const getCurrentUser = () => {
 }
 
 // Current User's Watchlist
-export const addToWatchlist = (movie) => {
+export const updateWatchlist = (userInfo) => {
     return {
-        type: 'ADD_TO_WATCHLIST',
-        movie
+        type: 'UPDATE_WATCHLIST',
+        watchlist: userInfo.included
     }
 }
 
@@ -109,11 +109,11 @@ export const sendMovieToAdd = (movie) => {
             body: JSON.stringify(movie)
         })
         .then(resp => resp.json())
-        .then(json => {
-            if (json.error) {
-                alert(json.error)
+        .then(userInfo => {
+            if (userInfo.already_in) {
+                alert(userInfo.already_in)
             } else {
-                dispatch(addToWatchlist(json))
+                dispatch(updateWatchlist(userInfo))
             }
         })
         .catch(error => console.log(error))

@@ -100,7 +100,7 @@ export const updateWatchlist = (userInfo) => {
     }
 }
 
-export const sendMovieToAdd = (movie) => {
+export const sendMovieToAdd = (movie, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/add_movie", {
             credentials: 'include',
@@ -116,6 +116,7 @@ export const sendMovieToAdd = (movie) => {
                 alert(userInfo.already_in)
             } else {
                 dispatch(updateWatchlist(userInfo))
+                history.push('/watchlist')
             }
         })
         .catch(error => console.log(error))

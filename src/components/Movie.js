@@ -27,6 +27,7 @@ class Movie extends Component {
             movieToAdd.movDetails.release_date = release_date
             movieToAdd.movDetails.runtime = runtime
 
+            const {history, sendMovieToAdd} = this.props
             return (
                 <div>
                     <h2>{title}</h2>
@@ -38,7 +39,7 @@ class Movie extends Component {
                     <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/w500" + backdrop_path}/>
                     <h4>Overview</h4>
                     <p>{overview}</p>
-                    <Button onClick={() => this.props.sendMovieToAdd(movieToAdd)}>Add to watchlist</Button>
+                    <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
                 </div>
             )
         } else {

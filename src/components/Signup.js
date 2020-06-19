@@ -17,8 +17,7 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
 
     const handleSubmit = event => {
         event.preventDefault()
-        signup(signupFormData)
-        history.push('/')
+        signup(signupFormData, history)
     }
 
     return (

@@ -16,7 +16,7 @@ export const clearCurrentUser = () => {
 }
 
 
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", {
             credentials: 'include',
@@ -33,13 +33,14 @@ export const login = credentials => {
                 alert(userInfo.error)
             } else {
                 dispatch(setCurrentUser(userInfo))
+                history.push('/')
             }
         })
         .catch(error => console.log(error))
     }
 }
 
-export const signup = credentials => {
+export const signup = (credentials, history) => {
     const userInfo = {
         user: credentials
     }
@@ -59,6 +60,7 @@ export const signup = credentials => {
                 alert(json.error)
             } else {
                 dispatch(setCurrentUser(json.data))
+                history.push('/')
             }
         })
         .catch(error => console.log(error))

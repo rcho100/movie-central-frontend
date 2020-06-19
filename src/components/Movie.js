@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { movieDetails } from '../actions/movieDetails'
 import Button from 'react-bootstrap/Button'
+import { sendMovieToAdd } from '../actions/currentUser'
 
 let movieID;
+let movieToAdd = {movDetails: {}};
 
 class Movie extends Component {
     componentDidMount() {
@@ -15,7 +17,16 @@ class Movie extends Component {
         
         if (this.props.movie) {
             const {id, title, backdrop_path, poster_path, overview, tagline, release_date, runtime} = this.props.movie
-            
+
+            movieToAdd.movDetails.id = id
+            movieToAdd.movDetails.title = title
+            movieToAdd.movDetails.backdrop_path = backdrop_path
+            movieToAdd.movDetails.poster_path = poster_path
+            movieToAdd.movDetails.overview = overview
+            movieToAdd.movDetails.tagline = tagline
+            movieToAdd.movDetails.release_date = release_date
+            movieToAdd.movDetails.runtime = runtime
+
             return (
                 <div>
                     <h2>{title}</h2>
@@ -27,7 +38,7 @@ class Movie extends Component {
                     <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/w500" + backdrop_path}/>
                     <h4>Overview</h4>
                     <p>{overview}</p>
-                    <Button>Add to watchlist</Button>
+                    <Button onClick={() => this.props.sendMovieToAdd(movieToAdd)}>Add to watchlist</Button>
                 </div>
             )
         } else {
@@ -45,4 +56,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { movieDetails })(Movie)
+export default connect(mapStateToProps, { movieDetails, sendMovieToAdd })(Movie)

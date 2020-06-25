@@ -4,6 +4,8 @@ import { movieDetails } from '../actions/movieDetails'
 import Button from 'react-bootstrap/Button'
 import { sendMovieToAdd } from '../actions/currentUser'
 import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 let movieID;
 let movieToAdd = {movDetails: {}};
@@ -32,19 +34,25 @@ class Movie extends Component {
             return (
                 <Container>
                     <h2>{title}</h2>
-                    <div >
                         <img className='backdrop' alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
-                    </div>
-                    <div>
-                        <h5>{tagline}</h5>
-                        <p>Release Date: {release_date}</p>
-                        <p>Runtime: {runtime} minutes</p>
-                        <p>Genres: {this.props.genres.join(', ')}</p>
-                        <img alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
-                        <h4>Overview</h4>
-                        <p>{overview}</p>
-                        <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
-                    </div>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <img alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
+                            </Col>
+                            <Col>
+                                <div>
+                                    <h5>{tagline}</h5>
+                                    <p>Release Date: {release_date}</p>
+                                    <p>Runtime: {runtime} minutes</p>
+                                    <p>Genres: {this.props.genres.join(', ')}</p>
+                                    <h4>Overview</h4>
+                                    <p>{overview}</p>
+                                    <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Container>
             )
         } else {

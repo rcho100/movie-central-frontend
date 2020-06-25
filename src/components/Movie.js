@@ -33,23 +33,22 @@ class Movie extends Component {
             const {history, sendMovieToAdd} = this.props
             return (
                 <Container>
-                    <h2>{title}</h2>
+                    <h1>{title}</h1>
                         <img className='backdrop' alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
-                    <Container>
+                    <Container className='movie-poster-details'>
                         <Row>
                             <Col>
-                                <img alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
+                                <img className='movie-poster' alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
                             </Col>
                             <Col>
-                                <div>
-                                    <h5>{tagline}</h5>
-                                    <p>Release Date: {release_date}</p>
-                                    <p>Runtime: {runtime} minutes</p>
-                                    <p>Genres: {this.props.genres.join(', ')}</p>
-                                    <h4>Overview</h4>
-                                    <p>{overview}</p>
-                                    <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
-                                </div>
+                                <h2>{title}</h2>
+                                <h5>{tagline}</h5>
+                                <p>Release Date: {release_date}</p>
+                                <p>Runtime: {runtime} minutes</p>
+                                <p>Genres: {this.props.genres.join(', ')}</p>
+                                <h4>Overview</h4>
+                                <p>{overview}</p>
+                                <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
                             </Col>
                         </Row>
                     </Container>

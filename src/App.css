@@ -8,3 +8,12 @@
   width: 100%;
   height: 100%;
 }
+
+.movie-poster-details {
+  margin: 4em 0;
+}
+
+.movie-poster {
+  width: 90%;
+  height: 92%;
+}

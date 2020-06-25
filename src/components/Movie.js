@@ -33,7 +33,7 @@ class Movie extends Component {
                 <Container>
                     <h2>{title}</h2>
                     <div >
-                        <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
+                        <img className='backdrop' alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
                     </div>
                     <div>
                         <h5>{tagline}</h5>

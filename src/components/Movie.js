@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { movieDetails } from '../actions/movieDetails'
 import Button from 'react-bootstrap/Button'
 import { sendMovieToAdd } from '../actions/currentUser'
+import Container from 'react-bootstrap/Container'
 
 let movieID;
 let movieToAdd = {movDetails: {}};
@@ -29,18 +30,22 @@ class Movie extends Component {
 
             const {history, sendMovieToAdd} = this.props
             return (
-                <div>
+                <Container>
                     <h2>{title}</h2>
-                    <img alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
-                    <p>Release Date: {release_date}</p>
-                    <p>Runtime: {runtime} minutes</p>
-                    <p>Genres: {this.props.genres.join(', ')}</p>
-                    <h5>{tagline}</h5>
-                    <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/w500" + backdrop_path}/>
-                    <h4>Overview</h4>
-                    <p>{overview}</p>
-                    <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
-                </div>
+                    <div >
+                        <img alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
+                    </div>
+                    <div>
+                        <h5>{tagline}</h5>
+                        <p>Release Date: {release_date}</p>
+                        <p>Runtime: {runtime} minutes</p>
+                        <p>Genres: {this.props.genres.join(', ')}</p>
+                        <img alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
+                        <h4>Overview</h4>
+                        <p>{overview}</p>
+                        <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
+                    </div>
+                </Container>
             )
         } else {
             return (

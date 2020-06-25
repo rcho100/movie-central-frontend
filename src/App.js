@@ -12,6 +12,7 @@ import PopularContainer from './containers/PopularContainer'
 import TopRatedContainer from './containers/TopRatedContainer'
 import Movie from './components/Movie'
 import Watchlist from './components/Watchlist'
+import './App.css'
 
 class App extends Component {
   componentDidMount() {

@@ -40,13 +40,13 @@ class Movie extends Component {
                             <Col>
                                 <img className='movie-poster' alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
                             </Col>
-                            <Col>
+                            <Col className='movie-details'>
                                 <h2>{title}</h2>
-                                <h5>{tagline}</h5>
+                                <h5 className='tagline'>{tagline}</h5>
                                 <p>Release Date: {release_date}</p>
                                 <p>Runtime: {runtime} minutes</p>
                                 <p>Genres: {this.props.genres.join(', ')}</p>
-                                <h4>Overview</h4>
+                                <h5 className='overview'>Overview</h5>
                                 <p>{overview}</p>
                                 <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
                             </Col>

@@ -13,6 +13,11 @@
   margin: 0.5em 0;
 }
 
+/* Poster */
+.card {
+  width: 18em;
+}
+
 /* Movie Details Page */
 
 .container h1 {

@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+/* Movie Card Deck */
+.card-deck {
+  justify-content: center;
+}
+
+.poster-card {
+  margin: 0.5em 0;
+}
+
 /* Movie Details Page */
 
 .container h1 {

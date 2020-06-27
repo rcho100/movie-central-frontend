@@ -3,6 +3,7 @@ import Poster from '../components/Poster'
 import { connect } from 'react-redux'
 import { topRatedMovies } from '../actions/movies'
 import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
 
 class TopRatedContainer extends Component {
     componentDidMount() {
@@ -12,14 +13,18 @@ class TopRatedContainer extends Component {
     render() {
         const { topMovies } = this.props
         return (
-            <div>
-                <p>Top Rated Movies</p>
-                {topMovies.slice(10).map(movie => (
-                    <Link to={`/movies/${movie.id}`} key={movie.id} >
-                        <Poster movie={movie} />
-                    </Link>
-                ))}
-            </div>
+            <Container>
+                <h1>Top Rated Movies</h1>
+                <div className="card-deck">
+                    {topMovies.slice(10).map(movie => {
+                        return (
+                            <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
+                                <Poster movie={movie} />
+                            </Link>
+                        )
+                    })}
+                </div>
+            </Container>
         )
     }
 }

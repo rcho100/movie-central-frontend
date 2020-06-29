@@ -2,6 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { updateLoginForm } from '../actions/loginForm'
 import { login } from '../actions/currentUser'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const Login = ({ loginFormData, updateLoginForm, login, history }) => {
     const handleInputChange = event => {
@@ -19,16 +24,28 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
     }
 
     return (
-       <div>
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='email'>Email:</label>
-            <input type='text' placeholder='Email' name='email' value={loginFormData.email} onChange={handleInputChange} />
-            <label htmlFor='password'>Password:</label>
-            <input type='text' placeholder='Password' name='password' value={loginFormData.password} onChange={handleInputChange} />
-            <input type='submit' value='Log In' />
-        </form>
-       </div>
+       <Container>
+            <Row>
+                <Col>
+                    <h1>Login</h1>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group controlId='formBasicEmail'>
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type='email' placeholder='Enter email' name='email' value={loginFormData.email} onChange={handleInputChange} />
+                        </Form.Group>
+
+                        <Form.Group controlId='formBasicPassword'>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type='password' placeholder='Password' name='password' value={loginFormData.password} onChange={handleInputChange} />
+                        </Form.Group>
+                        <Button variant='primary' type='submit'>
+                        Login
+                        </Button>
+                    </Form>
+                </Col>
+                <Col></Col>
+            </Row>
+       </Container>
     )
 }
 

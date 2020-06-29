@@ -1,29 +1,26 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import Poster from './Poster'
 import { Link } from 'react-router-dom'
+import Container from 'react-bootstrap/Container'
+
 
 const Watchlist = (props) => {
-    if (props.currentUser) {
+    if (props.currentUser.user) {
         return (
-            <div>
-                <h2>My Watchlist</h2>
-                {props.currentUser.watchlist.map(movie => (
-                    <Link to={`/movies/${movie.attributes.id_from_api}`} key={movie.attributes.title} >
-                        <Poster movie={movie.attributes} />
-                    </Link>
-                ))}
-            </div>
+            <Container>
+                <h1>My Watchlist</h1>
+                <div className="card-deck">
+                    {props.currentUser.watchlist.map(movie => (
+                        <Link className='poster-card' to={`/movies/${movie.attributes.id_from_api}`} key={movie.attributes.title} >
+                            <Poster movie={movie.attributes} />
+                        </Link>
+                    ))}
+                </div>
+            </Container>
         )
     } else {
         return <p>Loading...</p>
-    }
-    
+    }    
 }
-const mapStateToProps = ({ currentUser }) => {
-    return {
-      currentUser
-    }
-}
-  
-export default connect(mapStateToProps)(Watchlist)
+
+export default Watchlist

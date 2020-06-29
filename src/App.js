@@ -13,6 +13,7 @@ import TopRatedContainer from './containers/TopRatedContainer'
 import Movie from './components/Movie'
 import Watchlist from './components/Watchlist'
 import './App.css'
+import currentUser from './reducers/currentUser'
 
 class App extends Component {
   componentDidMount() {
@@ -33,7 +34,7 @@ class App extends Component {
               <Route exact path='/popular-movies' component={PopularContainer}/>
               <Route path='/movies/:id' render={routerProps => <Movie {...routerProps} />} />
               <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
-              <Route exact path='/watchlist' component={Watchlist}/>
+              <Route exact path='/watchlist' render={routerProps => <Watchlist {...routerProps} currentUser={this.props.currentUser} />} />
             </Switch>
           </Router>
         </Layout>

@@ -1,10 +1,9 @@
 import React from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import { connect } from 'react-redux'
 
 const NavigationBar = ({ currentUser }) => {
     return (
-        <Navbar expand='lg'>
+        <Navbar bg="primary" variant="light" expand='lg'>
             <Navbar.Brand href='/'></Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse id='basic-navbar-nav'>
@@ -27,10 +26,4 @@ const NavigationBar = ({ currentUser }) => {
     )
 }
 
-const mapStateToProps = ({ currentUser }) => {
-    return {
-      currentUser
-    }
-  }
-
-export default connect(mapStateToProps)(NavigationBar)
+export default NavigationBar

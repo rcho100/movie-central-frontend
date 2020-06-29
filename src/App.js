@@ -23,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavigationBar/>
+        <NavigationBar currentUser={this.props.currentUser} />
         <Layout>
           <Router>
             <Switch>

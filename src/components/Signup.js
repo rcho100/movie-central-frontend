@@ -46,7 +46,6 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
                         </Button>
                     </Form>
                 </Col>
-                <Col></Col>
             </Row>
         </Container>
     )

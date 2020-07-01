@@ -43,7 +43,6 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
                         </Button>
                     </Form>
                 </Col>
-                <Col></Col>
             </Row>
        </Container>
     )

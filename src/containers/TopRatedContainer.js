@@ -13,7 +13,7 @@ class TopRatedContainer extends Component {
     render() {
         const { topMovies } = this.props
         return (
-            <Container>
+            <Container className='main-movie-list'>
                 <h1>Top Rated Movies</h1>
                 <div className="card-deck">
                     {topMovies.slice(10).map(movie => {

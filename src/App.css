@@ -14,6 +14,12 @@
   display: flex;
 }
 
+.main-movie-list h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+}
+
 /* Poster */
 .card {
   width: 18em;

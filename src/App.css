@@ -11,11 +11,13 @@
 
 .poster-card {
   margin: 0.5em 0;
+  display: flex;
 }
 
 /* Poster */
 .card {
   width: 18em;
+  align-items: stretch;
 }
 
 /* Movie Details Page */

@@ -53,3 +53,11 @@
 .movie-details .btn {
   margin: 1.3em 0;
 }
+
+/* Home */
+.main-links {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  font-size: 3em;
+}

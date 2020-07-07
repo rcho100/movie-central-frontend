@@ -2,8 +2,16 @@ import React from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { logout } from '../actions/currentUser'
+import { useHistory } from 'react-router-dom'
 
 const NavigationBar = ({ currentUser, logout }) => {
+    const history = useHistory()
+
+    const handleLogout = () => {
+        logout()
+        history.push('/')
+    }
+
     return (
         <Navbar bg="primary" variant="light" expand='lg'>
             <Navbar.Brand href='/'>Movie Central</Navbar.Brand>
@@ -25,7 +33,7 @@ const NavigationBar = ({ currentUser, logout }) => {
                             <NavDropdown.Item href="/popular-movies">Popular Movies</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Item><Nav.Link href='/watchlist'>My Watchlist</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link onClick={() => logout()} href='#'>Logout</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link onClick={() => handleLogout()} href='#'>Logout</Nav.Link></Nav.Item>
                     </Nav>
                 }
             </Navbar.Collapse>

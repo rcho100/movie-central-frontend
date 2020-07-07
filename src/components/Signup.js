@@ -32,7 +32,7 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
                     <Form onSubmit={handleSubmit}>
                         <Form.Group controlId='formBasicEmail'>
                             <Form.Label>Username</Form.Label>
-                            <Form.Control type='text' placeholder='Username' name='name' value={signupFormData.name} onChange={handleInputChange} />
+                            <Form.Control className='first-input' type='text' placeholder='Username' name='name' value={signupFormData.name} onChange={handleInputChange} />
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type='email' placeholder='Enter email' name='email' value={signupFormData.email} onChange={handleInputChange} />
                         </Form.Group>

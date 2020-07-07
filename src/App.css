@@ -99,3 +99,16 @@
 .form {
   width: 50%;
 }
+
+.form .btn {
+  padding: .4rem .8rem;
+  margin: 0.5rem 0;
+}
+
+.form-control {
+  margin: 0.5rem 0 0.5rem;
+}
+
+.first-input {
+  margin: 0.5rem 0 1rem;
+}

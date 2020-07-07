@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { movieDetails } from '../actions/movieDetails'
-import Button from 'react-bootstrap/Button'
+import AddMovieBtn from './AddMovieBtn'
 import { sendMovieToAdd } from '../actions/currentUser'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -48,7 +48,7 @@ class Movie extends Component {
                                 <p>Genres: {this.props.genres.join(', ')}</p>
                                 <h5 className='overview'>Overview</h5>
                                 <p>{overview}</p>
-                                <Button onClick={() => sendMovieToAdd(movieToAdd, history)}>Add to watchlist</Button>
+                                <AddMovieBtn sendMovieToAdd={sendMovieToAdd} movieToAdd={movieToAdd} history={history}/>
                             </Col>
                         </Row>
                     </Container>

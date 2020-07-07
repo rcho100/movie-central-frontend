@@ -3,9 +3,8 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 
 const LogoutModal = (props) => {
-
     return (
-        <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+        <Modal show={props.show} onHide={props.onHide} dialogClassName="modal-40w" aria-labelledby="custom-modal-styling-title" >
             <Modal.Header closeButton/>
             <Modal.Body>
             <p>Are you sure you want to logout?</p>

@@ -7,6 +7,7 @@
 /* Navbar */
 .navbar {
   padding: 0.5rem 1rem 0.3rem 1rem;
+  font-family: fantasy;
 }
 
 .navbar-brand {
@@ -45,6 +46,7 @@
 
 .container h1 {
   margin: 1em 0 0.5em 0;
+  font-family: fantasy;
 }
 
 .backdrop {
@@ -78,6 +80,14 @@
 }
 
 /* Home */
+.home {
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 3.3em;
+}
+
 .main-links {
   display: flex;
   justify-content: space-evenly;

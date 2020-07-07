@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 
 const Home = () => {
     return (
-        <Container>
+        <Container className='home'>
             <h1>Movie Central</h1>
             <p>Welcome!</p>
             <p>Feel free to browse through any of the current popular movies or any of the top rated movies.</p>

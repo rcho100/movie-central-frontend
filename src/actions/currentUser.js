@@ -74,6 +74,7 @@ export const logout = () => {
             credentials: 'include',
             method: 'DELETE'
         })
+        .then(alert('You are now logged out'))
     }
 }
 

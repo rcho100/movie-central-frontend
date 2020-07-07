@@ -34,7 +34,7 @@ const NavigationBar = ({ currentUser, logout }) => {
 }
 
 NavigationBar.defaultProps = {
-    currentUser: []
+    currentUser: {}
 }
 
 const mapStateToProps = ({ currentUser }) => {

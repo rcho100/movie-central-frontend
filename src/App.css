@@ -33,7 +33,6 @@
 /* Movie Card Deck & Watchlist*/
 .movie-list h1 {
   font-size: 3em;
-  text-align: center;
 }
 
 /* Poster */
@@ -46,10 +45,10 @@
 .container h1 {
   margin: 1em 0 0.5em 0;
   font-family: fantasy;
+  text-align: center;
 }
 
 /* Movie Details Page */
-
 .backdrop {
   width: 100%;
   height: 100%;
@@ -94,4 +93,9 @@
   justify-content: space-evenly;
   font-weight: bold;
   font-size: 3em;
+}
+
+/* Forms */
+.form {
+  width: 50%;
 }

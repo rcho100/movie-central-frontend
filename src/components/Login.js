@@ -24,7 +24,7 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
     }
 
     return (
-       <Container>
+       <Container className='form'>
             <Row>
                 <Col>
                     <h1>Login</h1>

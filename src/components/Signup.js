@@ -25,7 +25,7 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
     }
 
     return (
-        <Container>
+        <Container className='form'>
             <Row>
                 <Col>
                     <h1>Sign Up</h1>

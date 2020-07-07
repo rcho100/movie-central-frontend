@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
-import Logout from './components/Logout'
 import Layout from './components/Layout'
 import NavigationBar from './components/NavigationBar'
 import { connect } from 'react-redux'
@@ -30,7 +29,6 @@ class App extends Component {
               <Route exact path='/' component={Home}/>
               <Route exact path='/signup' component={Signup}/>
               <Route exact path='/login' component={Login}/>
-              <Route exact path='/logout' component={Logout}/>
               <Route exact path='/popular-movies' component={PopularContainer}/>
               <Route path='/movies/:id' render={routerProps => <Movie {...routerProps} />} />
               <Route exact path='/top-rated-movies' component={TopRatedContainer}/>

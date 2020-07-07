@@ -23,7 +23,6 @@ const NavigationBar = ({ currentUser }) => {
                             <NavDropdown.Item href="/popular-movies">Popular Movies</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Item><Nav.Link href='/watchlist'>My Watchlist</Nav.Link></Nav.Item>
-                        <Nav.Item><Nav.Link href='/logout'>Logout</Nav.Link></Nav.Item>
                     </Nav>
                 }
             </Navbar.Collapse>

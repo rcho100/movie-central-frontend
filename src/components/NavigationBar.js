@@ -9,14 +9,14 @@ const NavigationBar = ({ currentUser, logout }) => {
             <Navbar.Brand href='/'>Movie Central</Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse id='basic-navbar-nav'>
-                {Object.values(currentUser.user).length === 0 ?
+                {Object.values(currentUser).length === 0 ?
                     <Nav className='ml-auto'>
                         <NavDropdown title="Movies" id="basic-nav-dropdown">
                             <NavDropdown.Item href="/top-rated-movies">Top Movies</NavDropdown.Item>
                             <NavDropdown.Item href="/popular-movies">Popular Movies</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Item><Nav.Link href='/login'>Login</Nav.Link></Nav.Item>
                         <Nav.Item><Nav.Link href='/signup'>Signup</Nav.Link></Nav.Item>
+                        <Nav.Item><Nav.Link href='/login'>Login</Nav.Link></Nav.Item>
                     </Nav>
                         :
                     <Nav className='ml-auto'>
@@ -33,9 +33,13 @@ const NavigationBar = ({ currentUser, logout }) => {
     )
 }
 
+NavigationBar.defaultProps = {
+    currentUser: []
+}
+
 const mapStateToProps = ({ currentUser }) => {
   return {
-    currentUser
+    currentUser: currentUser.user
   }
 }
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Home from './components/Home'
 import Signup from './components/Signup'
 import Login from './components/Login'
-import Layout from './components/Layout'
 import NavigationBar from './components/NavigationBar'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser"
@@ -21,20 +20,18 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavigationBar />
-        <Layout>
-          <Router>
-            <Switch>
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/signup' component={Signup}/>
-              <Route exact path='/login' component={Login}/>
-              <Route exact path='/popular-movies' component={PopularContainer}/>
-              <Route path='/movies/:id' render={routerProps => <Movie {...routerProps} />} />
-              <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
-              <Route exact path='/watchlist' render={routerProps => <Watchlist {...routerProps} currentUser={this.props.currentUser} />} />
-            </Switch>
-          </Router>
-        </Layout>
+        <Router>
+          <NavigationBar />
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/signup' component={Signup}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/popular-movies' component={PopularContainer}/>
+            <Route path='/movies/:id' render={routerProps => <Movie {...routerProps} />} />
+            <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
+            <Route exact path='/watchlist' render={routerProps => <Watchlist {...routerProps} currentUser={this.props.currentUser} />} />
+          </Switch>
+        </Router>
       </>
     )
   }

@@ -95,37 +95,3 @@
   font-weight: bold;
   font-size: 3em;
 }
-
-/* Modal */
-.modal {
-  color: black;
-}
-
-.close {
-  font-size: 1.8rem;
-}
-
-.modal-header {
-  border-bottom: 0px;
-  padding: 0.2rem 0.6rem 1.5rem 1rem;
-}
-
-.modal-footer {
-  justify-content: center;
-  border-top: 0px;
-}
-
-.modal-body {
-  font-size: 1.2em;
-  display: flex;
-  justify-content: center;
-}
-
-.modal-40w {
-  width: 29%;
-}
-
-.modal .btn {
-  padding: 0.4em 1.7em;
-  margin: 0.2em 0.5em 1.5em 0.5em;
-}

@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+/* Navbar */
+.navbar {
+  padding: 0.5rem 1rem 0.3rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.nav-link {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
 /* Movie Card Deck */
 .card-deck {
   justify-content: center;

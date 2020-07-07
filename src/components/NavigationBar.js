@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import LogoutModal from '../components/LogoutModal'
+import { connect } from 'react-redux'
+import { logout } from '../actions/currentUser'
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class NavigationBar extends Component {
         let addModalClose = () => this.setState({
             addModalShow: false
         })
-        
+
         return (
             <Navbar bg="primary" variant="light" expand='lg'>
                 <Navbar.Brand href='/'>Movie Central</Navbar.Brand>
@@ -36,7 +38,7 @@ class NavigationBar extends Component {
                             </NavDropdown>
                             <Nav.Item><Nav.Link href='/watchlist'>My Watchlist</Nav.Link></Nav.Item>
                             <Nav.Item><Nav.Link href='#' onClick={() => this.setState({ addModalShow: true })}>Logout</Nav.Link></Nav.Item>
-                            <LogoutModal show={this.state.addModalShow} onHide={addModalClose} />
+                            <LogoutModal show={this.state.addModalShow} onHide={addModalClose} logout={this.props.logout} />
                         </Nav>
                     }
                 </Navbar.Collapse>
@@ -45,4 +47,4 @@ class NavigationBar extends Component {
     }
 }
 
-export default NavigationBar
+export default connect(null, { logout } )(NavigationBar)

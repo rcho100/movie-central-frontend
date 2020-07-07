@@ -47,4 +47,10 @@ class NavigationBar extends Component {
     }
 }
 
-export default connect(null, { logout } )(NavigationBar)
+const mapStateToProps = ({ currentUser }) => {
+  return {
+    currentUser
+  }
+}
+
+export default connect(mapStateToProps, { logout } )(NavigationBar)

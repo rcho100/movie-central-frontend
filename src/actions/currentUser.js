@@ -113,7 +113,9 @@ export const sendMovieToAdd = (movie, history) => {
         })
         .then(resp => resp.json())
         .then(userInfo => {
-            if (userInfo.already_in) {
+            if (userInfo.not_logged_in) {
+                alert(userInfo.not_logged_in)
+            } else if (userInfo.already_in) {
                 alert(userInfo.already_in)
             } else {
                 dispatch(updateWatchlist(userInfo))

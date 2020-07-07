@@ -13,7 +13,7 @@ class PopularContainer extends Component {
     render() {
         const { popMovies } = this.props
         return (
-            <Container className='main-movie-list'>
+            <Container className='movie-list'>
                 <h1>Popular Movies</h1>
                 <div className="card-deck">
                     {popMovies.map(movie => {

@@ -30,10 +30,10 @@
   display: flex;
 }
 
-.main-movie-list h1 {
-  display: flex;
-  justify-content: center;
+/* Movie Card Deck & Watchlist*/
+.movie-list h1 {
   font-size: 3em;
+  text-align: center;
 }
 
 /* Poster */
@@ -42,12 +42,13 @@
   align-items: stretch;
 }
 
-/* Movie Details Page */
-
+/* All h1s */
 .container h1 {
   margin: 1em 0 0.5em 0;
   font-family: fantasy;
 }
+
+/* Movie Details Page */
 
 .backdrop {
   width: 100%;

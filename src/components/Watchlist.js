@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container'
 const Watchlist = (props) => {
     if (props.currentUser.user) {
         return (
-            <Container>
+            <Container className='movie-list'>
                 <h1>My Watchlist</h1>
                 <div className="card-deck">
                     {props.currentUser.watchlist.map(movie => (

@@ -18,7 +18,7 @@ const NavigationBar = ({ currentUser, logout }) => {
             <Navbar.Brand as={Link} to='/'>Movie Central</Navbar.Brand>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse id='basic-navbar-nav'>
-                {Object.values(currentUser).length === 0 ?
+                {Object.values(currentUser).length === 0 ? (
                     <Nav className='ml-auto'>
                         <NavDropdown title="Movies" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/top-rated-movies'>Top Movies</NavDropdown.Item>
@@ -27,7 +27,7 @@ const NavigationBar = ({ currentUser, logout }) => {
                         <Nav.Item><Nav.Link as={Link} to='/signup'>Signup</Nav.Link></Nav.Item>
                         <Nav.Item><Nav.Link as={Link} to='/login'>Login</Nav.Link></Nav.Item>
                     </Nav>
-                        :
+                ) : (
                     <Nav className='ml-auto'>
                         <NavDropdown title="Movies" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/top-rated-movies'>Top Movies</NavDropdown.Item>
@@ -36,7 +36,7 @@ const NavigationBar = ({ currentUser, logout }) => {
                         <Nav.Item><Nav.Link as={Link} to='/watchlist'>My Watchlist</Nav.Link></Nav.Item>
                         <Nav.Item><Nav.Link onClick={() => handleLogout()} >Logout</Nav.Link></Nav.Item>
                     </Nav>
-                }
+                )}
             </Navbar.Collapse>
         </Navbar>
     )

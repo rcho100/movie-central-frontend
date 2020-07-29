@@ -27,7 +27,7 @@ class App extends Component {
             <Route exact path='/signup' component={Signup}/>
             <Route exact path='/login' component={Login}/>
             <Route exact path='/popular-movies' component={PopularContainer}/>
-            <Route path='/movies/:id' render={routerProps => <Movie {...routerProps} />} />
+            <Route path='/movies/:id' component={Movie} />
             <Route exact path='/top-rated-movies' component={TopRatedContainer}/>
             <Route exact path='/watchlist' render={routerProps => <Watchlist {...routerProps} currentUser={this.props.currentUser} />} />
           </Switch>

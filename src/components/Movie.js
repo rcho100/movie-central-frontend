@@ -13,6 +13,7 @@ let movieToAdd = {movDetails: {}};
 class Movie extends Component {
     componentDidMount() {
         this.props.movieDetails(movieID)
+        window.scrollTo(0, 0)
     }
 
     render() {

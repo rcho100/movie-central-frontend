@@ -7,7 +7,6 @@
 /* Navbar */
 .navbar {
   padding: 0.5rem 1rem 0.3rem 1rem;
-  font-family: fantasy;
 }
 
 .navbar-brand {
@@ -44,7 +43,6 @@
 /* All h1s */
 .container h1 {
   margin: 1em 0 0.5em 0;
-  font-family: fantasy;
   text-align: center;
 }
 

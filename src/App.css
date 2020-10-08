@@ -46,6 +46,11 @@
   text-align: center;
 }
 
+/* Loading */
+.loading {
+  text-align: center;
+}
+
 /* Movie Details Page */
 .backdrop {
   width: 100%;

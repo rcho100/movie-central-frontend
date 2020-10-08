@@ -16,13 +16,17 @@ class TopRatedContainer extends Component {
             <Container className='movie-list'>
                 <h1>Top Rated Movies</h1>
                 <div className="card-deck">
-                    {topMovies.map(movie => {
-                        return (
-                            <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
-                                <Poster movie={movie} />
-                            </Link>
-                        )
-                    })}
+                    {!!topMovies ?
+                        topMovies.map(movie => {
+                            return (
+                                <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
+                                    <Poster movie={movie} />
+                                </Link>
+                            )
+                        })
+                    :
+                    <h2 className="loading">Loading...</h2>
+                    }
                 </div>
             </Container>
         )

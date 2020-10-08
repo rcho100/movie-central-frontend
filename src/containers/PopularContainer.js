@@ -16,13 +16,17 @@ class PopularContainer extends Component {
             <Container className='movie-list'>
                 <h1>Popular Movies</h1>
                 <div className="card-deck">
-                    {popMovies.map(movie => {
-                        return (
-                            <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
-                                <Poster movie={movie} />
-                            </Link>
-                        )
-                    })}
+                    {!!popMovies ?
+                        popMovies.map(movie => {
+                            return (
+                                <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
+                                    <Poster movie={movie} />
+                                </Link>
+                            )
+                        })
+                    :
+                    <h2 className="loading">Loading...</h2>
+                    }
                 </div>
             </Container>
         )

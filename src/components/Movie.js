@@ -57,7 +57,7 @@ class Movie extends Component {
             )
         } else {
             return (
-                <div>Loading...</div>
+                <h2 className='loading'>Loading...</h2>
             )
         }
     }

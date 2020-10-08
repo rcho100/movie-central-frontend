@@ -19,7 +19,7 @@ const Watchlist = (props) => {
             </Container>
         )
     } else {
-        return <p>Loading...</p>
+        return <h2 className="loading">Loading...</h2>
     }    
 }
 

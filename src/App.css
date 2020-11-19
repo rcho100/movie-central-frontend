@@ -6,16 +6,16 @@
 
 /* Navbar */
 .navbar {
-  padding: 0.5rem 1rem 0.3rem 1rem;
+  padding: 0.5em 1em 0.3em 1em;
 }
 
 .navbar-brand {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
 .nav-link {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -31,7 +31,7 @@
 
 /* Movie Card Deck & Watchlist*/
 .movie-list h1 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 /* Poster */
@@ -88,14 +88,14 @@
 }
 
 .home h1 {
-  font-size: 3.3em;
+  font-size: 3.3rem;
 }
 
 .main-links {
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 /* Forms */
@@ -104,14 +104,14 @@
 }
 
 .form .btn {
-  padding: .4rem .8rem;
-  margin: 0.5rem 0;
+  padding: .4em .8em;
+  margin: 0.5em 0;
 }
 
 .form-control {
-  margin: 0.5rem 0 0.5rem;
+  margin: 0.5em 0 0.5em;
 }
 
 .first-input {
-  margin: 0.5rem 0 1rem;
+  margin: 0.5em 0 1em;
 }

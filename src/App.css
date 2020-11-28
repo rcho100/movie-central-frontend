@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /* Navbar */
 .navbar {
-  padding: 0.5em 1em 0.3em 1em;
+  padding: 0.5rem 1rem 0.3rem 1rem;
 }
 
 .navbar-brand {
@@ -25,7 +29,7 @@
 }
 
 .poster-card-link {
-  margin: 0.5em 0;
+  margin: 0.5rem 0;
   display: flex;
 }
 
@@ -36,13 +40,13 @@
 
 /* Poster */
 .card {
-  width: 18em;
+  width: 18rem;
   align-items: stretch;
 }
 
 /* All h1s */
 .container h1 {
-  margin: 1em 0 0.5em 0;
+  margin: 1rem 0 0.5rem 0;
   text-align: center;
 }
 
@@ -58,7 +62,7 @@
 }
 
 .movie-poster-details {
-  margin: 4em 0;
+  margin: 4rem 0;
 }
 
 .movie-poster {
@@ -67,19 +71,19 @@
 }
 
 .movie-details .tagline {
-  margin: 0.5em 0 1em 0;
+  margin: 0.5rem 0 1rem 0;
 }
 
 .movie-details p {
-  margin: 0.8em 0;
+  margin: 0.8rem 0;
 }
 
 .movie-details .overview {
-  margin: 1.6em 0 0.5em 0;
+  margin: 1.6rem 0 0.5rem 0;
 }
 
 .movie-details .btn {
-  margin: 1.3em 0;
+  margin: 1.3rem 0;
 }
 
 /* Home */
@@ -104,14 +108,14 @@
 }
 
 .form .btn {
-  padding: .4em .8em;
-  margin: 0.5em 0;
+  padding: .4rem .8rem;
+  margin: 0.5rem 0;
 }
 
 .form-control {
-  margin: 0.5em 0 0.5em;
+  margin: 0.5rem 0 0.5rem;
 }
 
 .first-input {
-  margin: 0.5em 0 1em;
+  margin: 0.5rem 0 1rem;
 }

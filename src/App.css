@@ -18,13 +18,17 @@ body {
 }
 
 .navbar-brand {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
 .nav-link {
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: 500;
+}
+
+.dropdown-item {
+  font-size: 1.5rem;
 }
 
 /* Movie Card Deck */
@@ -50,6 +54,7 @@ body {
 
 /* All h1s */
 .container h1 {
+  font-size: 5rem;
   margin: 1rem 0 0.5rem 0;
   text-align: center;
 }
@@ -93,10 +98,12 @@ body {
 /* Home */
 .home {
   text-align: center;
+  font-size: 2rem;
 }
 
 .home h1 {
-  font-size: 3.3rem;
+  padding: ;
+  font-size: 4rem;
 }
 
 .main-links {

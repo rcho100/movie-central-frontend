@@ -160,3 +160,22 @@ h5 {
     margin: 2rem 0 0;
   }
 }
+
+@media (max-width: 800px) {
+  /* Scaling */
+  html {
+    font-size: 45%;
+  }
+
+  /* Movie Details Page */
+  .movie-poster {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 460px) {
+  /* Movie Details Page */
+  .movie-poster-details {
+    flex-direction: column-reverse;
+  }
+}

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Poster from '../components/Poster'
 import { connect } from 'react-redux'
 import { topRatedMovies } from '../actions/movies'
-import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 
 class TopRatedContainer extends Component {
@@ -19,9 +18,7 @@ class TopRatedContainer extends Component {
                     {!!topMovies ?
                         topMovies.map(movie => {
                             return (
-                                <Link className='poster-card' to={`/movies/${movie.id}`} key={movie.id} >
-                                    <Poster movie={movie} />
-                                </Link>
+                                <Poster movie={movie} key={movie.id}/>
                             )
                         })
                     :

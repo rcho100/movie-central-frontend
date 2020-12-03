@@ -1,7 +1,30 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h5 {
+  margin: 1.6rem 0 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 /* Navbar */
@@ -10,13 +33,17 @@
 }
 
 .navbar-brand {
-  font-size: 1.8em;
+  font-size: 3rem;
   font-weight: 600;
 }
 
 .nav-link {
-  font-size: 1.3em;
+  font-size: 2rem;
   font-weight: 500;
+}
+
+.dropdown-item {
+  font-size: 1.5rem;
 }
 
 /* Movie Card Deck */
@@ -24,26 +51,23 @@
   justify-content: center;
 }
 
-.poster-card {
-  margin: 0.5em 0;
+.poster-card-link {
   display: flex;
 }
 
+.poster-card-link .card {
+  margin: 0 1.5rem 3rem;
+}
+
 /* Movie Card Deck & Watchlist*/
-.movie-list h1 {
-  font-size: 3em;
+.card p {
+  font-size: 1.5rem;
 }
 
 /* Poster */
 .card {
-  width: 18em;
+  width: 25rem;
   align-items: stretch;
-}
-
-/* All h1s */
-.container h1 {
-  margin: 1em 0 0.5em 0;
-  text-align: center;
 }
 
 /* Loading */
@@ -58,60 +82,90 @@
 }
 
 .movie-poster-details {
-  margin: 4em 0;
+  display: flex;
+  margin: 6rem 4rem 4rem 0;
+  padding: 0;
 }
 
 .movie-poster {
-  width: 90%;
-  height: 92%;
+  width: 35rem;
+  margin: 0 4rem 0 0;
 }
 
 .movie-details .tagline {
-  margin: 0.5em 0 1em 0;
+  margin: 0.5rem 0 1rem 0;
+  font-style: italic;
 }
 
 .movie-details p {
-  margin: 0.8em 0;
-}
-
-.movie-details .overview {
-  margin: 1.6em 0 0.5em 0;
+  margin: 0.8rem 0;
+  font-size: 2rem;
 }
 
 .movie-details .btn {
-  margin: 1.3em 0;
+  margin: 1.3rem 0;
+  font-size: 1.7rem;
 }
 
 /* Home */
 .home {
   text-align: center;
-}
-
-.home h1 {
-  font-size: 3.3em;
+  font-size: 2rem;
 }
 
 .main-links {
   display: flex;
   justify-content: space-evenly;
+  margin: 2.5rem 0 0;
+}
+
+.main-links p {
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3.5rem;
+  margin: 2rem 0 0;
 }
 
 /* Forms */
 .form {
   width: 50%;
+  font-size: 3rem;
 }
 
 .form .btn {
   padding: .4rem .8rem;
   margin: 0.5rem 0;
+  font-size: 1.7rem;
 }
 
 .form-control {
   margin: 0.5rem 0 0.5rem;
+  font-size: 2rem;
 }
 
 .first-input {
   margin: 0.5rem 0 1rem;
+}
+
+@media (max-width: 800px) {
+  /* Scaling */
+  html {
+    font-size: 45%;
+  }
+
+  /* Home page */
+  .main-links {
+    flex-direction: column;
+  }
+
+  /* Movie Details Page */
+  .movie-poster {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 460px) {
+  /* Movie Details Page */
+  .movie-poster-details {
+    flex-direction: column-reverse;
+  }
 }

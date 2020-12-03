@@ -81,14 +81,15 @@ h5 {
   height: 100%;
 }
 
-.movie-poster-details .col {
+.movie-poster-details {
+  display: flex;
   margin: 6rem 4rem 4rem 0;
   padding: 0;
 }
 
 .movie-poster {
-  width: 90%;
-  height: 92%;
+  width: 35rem;
+  margin: 0 4rem 0 0;
 }
 
 .movie-details .tagline {

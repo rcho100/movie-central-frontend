@@ -4,8 +4,6 @@ import { movieDetails } from '../actions/movieDetails'
 import AddMovieBtn from './AddMovieBtn'
 import { sendMovieToAdd } from '../actions/currentUser'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 let movieID;
 let movieToAdd = {movDetails: {}};
@@ -37,11 +35,8 @@ class Movie extends Component {
                     <h1>{title}</h1>
                         <img className='backdrop' alt="movie backdrop" src={"https://image.tmdb.org/t/p/original" + backdrop_path}/>
                     <Container className='movie-poster-details'>
-                        <Row>
-                            <Col>
-                                <img className='movie-poster' alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
-                            </Col>
-                            <Col className='movie-details'>
+                        <img className='movie-poster' alt="movie poster" src={"https://image.tmdb.org/t/p/w500" + poster_path}/>
+                            <div className='movie-details'>
                                 <h2>{title}</h2>
                                 <h5 className='tagline'>{tagline}</h5>
                                 <p>Release Date: {release_date}</p>
@@ -50,8 +45,7 @@ class Movie extends Component {
                                 <h5 className='overview'>Overview</h5>
                                 <p>{overview}</p>
                                 <AddMovieBtn sendMovieToAdd={sendMovieToAdd} movieToAdd={movieToAdd} history={history}/>
-                            </Col>
-                        </Row>
+                            </div>
                     </Container>
                 </Container>
             )

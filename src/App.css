@@ -37,29 +37,28 @@ body {
 }
 
 .poster-card-link {
-  margin: 0.5rem 0;
   display: flex;
 }
 
-/* Movie Card Deck & Watchlist*/
-.movie-list h1 {
-  font-size: 3rem;
+.poster-card-link .card {
+  margin: 0 1.5rem 3rem;
 }
 
+/* Movie Card Deck & Watchlist*/
 .card h5, p {
   font-size: 1.5rem;
 }
 
 /* Poster */
 .card {
-  width: 18rem;
+  width: 25rem;
   align-items: stretch;
 }
 
 /* All h1s */
 .container h1 {
   font-size: 5rem;
-  margin: 1rem 0 0.5rem 0;
+  margin: 3rem 0;
   text-align: center;
 }
 
@@ -74,8 +73,9 @@ body {
   height: 100%;
 }
 
-.movie-poster-details {
-  margin: 4rem 0;
+.movie-poster-details .col {
+  margin: 6rem 4rem 4rem 0;
+  padding: 0;
 }
 
 .movie-poster {
@@ -85,6 +85,7 @@ body {
 
 .movie-details .tagline {
   margin: 0.5rem 0 1rem 0;
+  font-style: italic;
 }
 
 .movie-details p {

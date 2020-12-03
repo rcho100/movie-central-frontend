@@ -46,6 +46,10 @@ body {
   font-size: 3rem;
 }
 
+.card h5, p {
+  font-size: 1.5rem;
+}
+
 /* Poster */
 .card {
   width: 18rem;
@@ -85,14 +89,21 @@ body {
 
 .movie-details p {
   margin: 0.8rem 0;
+  font-size: 2rem;
 }
 
-.movie-details .overview {
+.movie-details h2 {
+  font-size: 4rem;
+}
+
+.movie-details h5 {
   margin: 1.6rem 0 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 .movie-details .btn {
   margin: 1.3rem 0;
+  font-size: 1.7rem;
 }
 
 /* Home */
@@ -102,7 +113,7 @@ body {
 }
 
 .home h1 {
-  padding: ;
+  padding: 2rem;
   font-size: 4rem;
 }
 
@@ -116,15 +127,18 @@ body {
 /* Forms */
 .form {
   width: 50%;
+  font-size: 3rem;
 }
 
 .form .btn {
   padding: .4rem .8rem;
   margin: 0.5rem 0;
+  font-size: 1.7rem;
 }
 
 .form-control {
   margin: 0.5rem 0 0.5rem;
+  font-size: 2rem;
 }
 
 .first-input {

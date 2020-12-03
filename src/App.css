@@ -144,3 +144,18 @@ h5 {
 .first-input {
   margin: 0.5rem 0 1rem;
 }
+
+@media (orientation: portrait) {
+  .main-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2.5rem 0 0;
+  }
+  
+  .main-links p {
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin: 2rem 0 0;
+  }
+}

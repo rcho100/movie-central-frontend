@@ -115,8 +115,13 @@ h5 {
 .main-links {
   display: flex;
   justify-content: space-evenly;
+  margin: 2.5rem 0 0;
+}
+
+.main-links p {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  margin: 2rem 0 0;
 }
 
 /* Forms */

@@ -12,6 +12,21 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 5rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h5 {
+  margin: 1.6rem 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
 /* Navbar */
 .navbar {
   padding: 0.5rem 1rem 0.3rem 1rem;
@@ -45,7 +60,7 @@ body {
 }
 
 /* Movie Card Deck & Watchlist*/
-.card h5, p {
+.card p {
   font-size: 1.5rem;
 }
 
@@ -53,13 +68,6 @@ body {
 .card {
   width: 25rem;
   align-items: stretch;
-}
-
-/* All h1s */
-.container h1 {
-  font-size: 5rem;
-  margin: 3rem 0;
-  text-align: center;
 }
 
 /* Loading */
@@ -93,15 +101,6 @@ body {
   font-size: 2rem;
 }
 
-.movie-details h2 {
-  font-size: 4rem;
-}
-
-.movie-details h5 {
-  margin: 1.6rem 0 0.5rem 0;
-  font-size: 1.5rem;
-}
-
 .movie-details .btn {
   margin: 1.3rem 0;
   font-size: 1.7rem;
@@ -111,11 +110,6 @@ body {
 .home {
   text-align: center;
   font-size: 2rem;
-}
-
-.home h1 {
-  padding: 2rem;
-  font-size: 4rem;
 }
 
 .main-links {

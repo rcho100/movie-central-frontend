@@ -113,6 +113,12 @@ h5 {
   font-size: 2rem;
 }
 
+header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(7, 14, 80, 0.8), rgba(87, 124, 245, 0.096)), url(./images/homepage.jpg);
+  background-size: cover;
+}
+
 .main-links {
   display: flex;
   justify-content: space-evenly;

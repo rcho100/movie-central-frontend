@@ -113,6 +113,12 @@ h5 {
   font-size: 2rem;
 }
 
+header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(7, 14, 80, 0.8), rgba(87, 124, 245, 0.096)), url(./images/homepage.jpg);
+  background-size: cover;
+}
+
 .main-links {
   display: flex;
   justify-content: space-evenly;
@@ -122,7 +128,18 @@ h5 {
 .main-links p {
   font-weight: bold;
   font-size: 3.5rem;
-  margin: 2rem 0 0;
+  margin: 2rem 0;
+}
+
+.movies-link:link,
+.movies-link:visited {
+  text-decoration: none;
+  transition: all 0.2s;
+  /* this line above makes the animation between regular & hover & active smoother */
+}
+
+.movies-link:hover {
+  transform: translateY(-.2rem);
 }
 
 /* Forms */

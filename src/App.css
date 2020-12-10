@@ -143,9 +143,25 @@ header {
 }
 
 /* Forms */
+.form-page {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-popcorn {
+  margin: 3rem 2rem;
+  width: 45rem;
+}
+
 .form {
-  width: 50%;
-  font-size: 3rem;
+  margin: 0;
+  width: 40rem;
+  font-size: 2rem;
+}
+
+.form h1 {
+  font-size: 4rem;
+  margin: 3rem 0 2rem;
 }
 
 .form .btn {
@@ -184,5 +200,17 @@ header {
   /* Movie Details Page */
   .movie-poster-details {
     flex-direction: column-reverse;
+  }
+
+  /* Form pages */
+  .form-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  .form-popcorn {
+    margin: 5rem;
+    width: 35rem;
   }
 }

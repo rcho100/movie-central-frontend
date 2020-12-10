@@ -18,7 +18,7 @@ class TopRatedContainer extends Component {
                     {!!topMovies ?
                         topMovies.map(movie => {
                             return (
-                                <Poster movie={movie} key={movie.id}/>
+                                <Poster movie={movie} id={movie.id} key={movie.title}/>
                             )
                         })
                     :

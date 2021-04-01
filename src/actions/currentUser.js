@@ -11,7 +11,7 @@ export const clearCurrentUser = () => ({
   type: 'CLEAR_CURRENT_USER',
 });
 
-export const login = (credentials, history) => (dispatch) => fetch('http://localhost:3001/api/v1/login', {
+export const login = (credentials, history) => (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/login', {
   credentials: 'include',
   method: 'Post',
   headers: {
@@ -35,7 +35,7 @@ export const signup = (credentials, history) => {
   const userInfo = {
     user: credentials,
   };
-  return (dispatch) => fetch('http://localhost:3001/api/v1/signup', {
+  return (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/signup', {
     credentials: 'include',
     method: 'POST',
     headers: {
@@ -58,14 +58,14 @@ export const signup = (credentials, history) => {
 
 export const logout = () => (dispatch) => {
   dispatch(clearCurrentUser());
-  return fetch('http://localhost:3001/api/v1/logout', {
+  return fetch('https://movie-central-backend.herokuapp.com/api/v1/logout', {
     credentials: 'include',
     method: 'DELETE',
   })
     .then(alert('You are now logged out'));
 };
 
-export const getCurrentUser = () => (dispatch) => fetch('http://localhost:3001/api/v1/get_current_user', {
+export const getCurrentUser = () => (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/get_current_user', {
   credentials: 'include',
 })
   .then((resp) => resp.json())
@@ -82,7 +82,7 @@ export const updateWatchlist = (userInfo) => ({
   watchlist: userInfo.included,
 });
 
-export const sendMovieToAdd = (movie, history) => (dispatch) => fetch('http://localhost:3001/api/v1/add_movie', {
+export const sendMovieToAdd = (movie, history) => (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/add_movie', {
   credentials: 'include',
   method: 'POST',
   headers: {

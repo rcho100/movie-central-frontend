@@ -3,7 +3,7 @@ export const receivePopMovies = (popMovies) => ({
   popMovies,
 });
 
-export const popularMovies = () => (dispatch) => fetch('http://localhost:3001/api/v1/popular')
+export const popularMovies = () => (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/popular')
   .then((resp) => resp.json())
   .then((popMovies) => {
     dispatch(receivePopMovies(popMovies));
@@ -15,7 +15,7 @@ export const receiveTopMovies = (topMovies) => ({
   topMovies,
 });
 
-export const topRatedMovies = () => (dispatch) => fetch('http://localhost:3001/api/v1/top_rated')
+export const topRatedMovies = () => (dispatch) => fetch('https://movie-central-backend.herokuapp.com/api/v1/top_rated')
   .then((resp) => resp.json())
   .then((topMovies) => {
     dispatch(receiveTopMovies(topMovies));

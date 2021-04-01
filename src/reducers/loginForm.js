@@ -1,15 +1,15 @@
 const initialState = {
-    email: "",
-    password: ""
-}
+  email: '',
+  password: '',
+};
 
 export default (state = initialState, action) => {
-    switch (action.type) {
-        case "UPDATE_LOGIN_FORM":
-            return action.formData
-        case "RESET_LOGIN_FORM":
-            return initialState
-        default:
-            return state
-    }
-}
+  switch (action.type) {
+    case 'UPDATE_LOGIN_FORM':
+      return action.formData;
+    case 'RESET_LOGIN_FORM':
+      return initialState;
+    default:
+      return state;
+  }
+};

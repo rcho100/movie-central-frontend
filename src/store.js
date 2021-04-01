@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import currentUser from './reducers/currentUser'
 import loginForm from './reducers/loginForm'
 import signupForm from './reducers/signupForm'
-import { movies } from './reducers/movies'
+import movies from './reducers/movies'
 import { movieDetails } from './reducers/movieDetails'
 import thunk from 'redux-thunk';
 
